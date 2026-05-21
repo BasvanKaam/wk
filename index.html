@@ -76,7 +76,7 @@ nav{background:rgba(8,8,9,.97);backdrop-filter:blur(20px);height:68px;display:fl
 .bbtn.urg:hover{background:var(--red2);box-shadow:0 4px 16px rgba(224,64,64,.3)}
 
 /* HERO */
-.hero{position:relative;overflow:visible;padding:60px 1.5rem 100px;border-bottom:1px solid var(--bdr)}
+.hero{position:relative;overflow:hidden;padding:56px 1.5rem 64px;border-bottom:1px solid var(--bdr)}
 .hi{max-width:1160px;margin:0 auto;display:grid;grid-template-columns:1fr 440px;gap:56px;align-items:center;position:relative;z-index:2}
 .hero-ey{font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
 h1.ht{font-family:'Bebas Neue',sans-serif;font-size:clamp(52px,6.5vw,86px);line-height:.93;color:var(--white)}
@@ -286,7 +286,7 @@ h1.ht span{color:var(--gold);display:block}
 }
 
 /* LIVE BLINKER */
-.live-badge{display:inline-flex;align-items:center;gap:7px;background:#080808;border:1.5px solid #d42020;border-radius:6px;padding:0 16px;height:100%;color:#ff3838;flex-shrink:0;white-space:nowrap;box-shadow:0 0 14px rgba(212,32,32,.3),inset 0 0 10px rgba(212,32,32,.08);animation:lb-pulse 2s ease-in-out infinite}
+.live-badge{display:inline-flex;align-items:center;gap:14px;background:#080808;border:1.5px solid #d42020;border-radius:6px;padding:0 28px;height:100%;color:#ff3838;flex-shrink:0;white-space:nowrap;box-shadow:0 0 14px rgba(212,32,32,.3),inset 0 0 10px rgba(212,32,32,.08);animation:lb-pulse 2s ease-in-out infinite}
 .live-dot{width:9px;height:9px;border-radius:50%;background:#ff3838;flex-shrink:0;animation:ld-pulse 1.2s ease-out infinite}
 .live-txt{font-family:'Bebas Neue',sans-serif;font-size:17px;letter-spacing:3.5px;animation:lt-flicker 2.8s ease-in-out infinite}
 @keyframes ld-pulse{0%{box-shadow:0 0 0 0 rgba(255,56,56,.9);background:#ff3838}50%{box-shadow:0 0 0 8px rgba(255,56,56,0);background:#ff6060}100%{box-shadow:0 0 0 0 rgba(255,56,56,0);background:#ff3838}}
@@ -294,13 +294,13 @@ h1.ht span{color:var(--gold);display:block}
 @keyframes lt-flicker{0%,88%,100%{opacity:1}92%{opacity:.5}}
 
 /* HERO LEEUW */
-.hero-lion-wrap{display:flex;align-items:flex-end;gap:0;margin-bottom:22px}
+.hero-lion-wrap{display:flex;align-items:flex-end;gap:0;margin-bottom:24px}
 .hero-lion-txt{flex:1;min-width:0}
-.hlion{height:clamp(160px,19vw,250px);width:auto;flex-shrink:0;margin-left:-8px;margin-bottom:-80px;filter:drop-shadow(0 8px 28px rgba(255,100,0,.22));position:relative;z-index:3;pointer-events:none;display:block}
+.hlion{height:clamp(140px,16vw,210px);width:auto;flex-shrink:0;margin-left:4px;margin-bottom:0;filter:drop-shadow(0 6px 22px rgba(255,100,0,.2));position:relative;z-index:3;pointer-events:none;display:block}
 
 /* TEAM GROTER */
 .pfield{background:#091a0c;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:44px 44px;padding:32px 20px;min-height:560px;position:relative;display:flex;flex-direction:column;justify-content:space-around;gap:0}
-.pslot{width:90px;text-align:center;cursor:pointer;transition:transform .15s}
+.pslot{width:82px;text-align:center;cursor:pointer;transition:transform .15s}
 .pslot:hover{transform:translateY(-4px)}
 .psw{width:72px;height:72px;border-radius:50%;border:2.5px solid var(--bdr2);margin:0 auto 8px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;overflow:hidden;background:var(--bg4);transition:border-color .18s,box-shadow .18s}
 .pslot:hover .psw{border-color:var(--gold);box-shadow:0 0 16px rgba(184,144,46,.3)}
@@ -313,8 +313,8 @@ h1.ht span{color:var(--gold);display:block}
 
 /* RESPONSIVE OVERRIDES */
 @media(max-width:768px){
-  .hero-lion-wrap{flex-direction:column-reverse;align-items:center;gap:16px;margin-bottom:20px}
-  .hlion{height:190px;margin:0;position:static;filter:drop-shadow(0 6px 20px rgba(255,100,0,.2))}
+  .hero-lion-wrap{flex-direction:column;align-items:center;gap:0;margin-bottom:20px}
+  .hlion{height:160px;margin:0 auto 12px;display:block;position:static;filter:drop-shadow(0 4px 16px rgba(255,100,0,.18))}
   .hero-lion-txt{width:100%}
   h1.ht{text-align:left}
   .pfield{padding:20px 8px;min-height:460px}
@@ -324,12 +324,12 @@ h1.ht span{color:var(--gold);display:block}
   .psn{font-size:10px}
   .psr{font-size:10px}
   .psp{font-size:8px}
-  .live-badge{padding:0 12px;gap:5px}
+  .live-badge{padding:0 16px;gap:10px}
   .live-txt{font-size:14px;letter-spacing:2.5px}
   .live-dot{width:7px;height:7px}
 }
 @media(max-width:400px){
-  .hlion{height:160px}
+  .hlion{height:130px}
   .pfield{padding:14px 4px;min-height:400px}
   .psw{width:46px;height:46px}
   .pslot{width:56px}
@@ -337,6 +337,17 @@ h1.ht span{color:var(--gold);display:block}
   .psn{font-size:9px;font-weight:600}
   .psr{font-size:9px}
 }
+
+/* ROUND FLAG IN PITCH */
+.psw{overflow:hidden;background:var(--bg4);border:2.5px solid var(--bdr2)}
+.psw-flag{padding:0;border:2.5px solid rgba(255,255,255,.18)}
+.psw-flag svg{display:block;width:160%;height:160%;min-width:160%;flex-shrink:0;position:relative;top:-30%;left:-30%}
+.pitch-flag-wrap{width:100%;height:100%;overflow:hidden;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.pitch-flag-wrap span{display:flex;width:150%;height:150%;flex-shrink:0;border-radius:0 !important;box-shadow:none !important;margin:-25% 0 0 -25%}
+.pitch-flag-wrap span svg{display:block;width:100%;height:100%}
+.psn{font-size:11px;color:var(--white);font-weight:700;line-height:1.25;margin-top:4px;word-break:break-word}
+.psn .disc{color:var(--muted2);font-weight:500;font-size:10px}
+.psr{font-size:11px;color:var(--gold);font-weight:700;margin-top:1px;letter-spacing:1px}
 </style>
 </head>
 <body>
@@ -518,24 +529,25 @@ h1.ht span{color:var(--gold);display:block}
       <div class="pfield">
         <div class="pline"></div><div class="pcirc"></div>
         <div class="frow">
-          <div class="pslot"><div class="psw"><span class="psf"><span style="width:30px;height:21px;display:inline-flex;flex-shrink:0;border-radius:3px;overflow:hidden;vertical-align:middle;box-shadow:0 0 0 1px rgba(255,255,255,.12)"><svg viewBox="0 0 20 14"><rect width="20" height="14" rx="2" fill="#EF4135"/><rect width="13.33" height="14" fill="#fff"/><rect width="6.67" height="14" fill="#002395"/></svg></span></span><span class="psp">AAN</span></div><div class="psn">Mbappé</div><div class="psr">94★</div></div>
-          <div class="pslot"><div class="psw"><span class="psf"><span style="width:30px;height:21px;display:inline-flex;flex-shrink:0;border-radius:3px;overflow:hidden;vertical-align:middle;box-shadow:0 0 0 1px rgba(255,255,255,.12)"><svg viewBox="0 0 20 14"><rect width="20" height="14" rx="2" fill="#EF2B2D"/><rect x="5" y="0" width="3" height="14" fill="#fff"/><rect x="0" y="5.5" width="20" height="3" fill="#fff"/><rect x="6" y="0" width="1.5" height="14" fill="#002868"/><rect x="0" y="6.25" width="20" height="1.5" fill="#002868"/></svg></span></span><span class="psp">AAN</span></div><div class="psn">Haaland</div><div class="psr">92★</div></div>
-          <div class="pslot"><div class="psw"><span class="psf"><span style="width:30px;height:21px;display:inline-flex;flex-shrink:0;border-radius:3px;overflow:hidden;vertical-align:middle;box-shadow:0 0 0 1px rgba(255,255,255,.12)"><svg viewBox="0 0 20 14"><rect width="20" height="14" rx="2" fill="#009C3B"/><polygon points="10,1.5 18.5,7 10,12.5 1.5,7" fill="#FFDF00"/><circle cx="10" cy="7" r="3.2" fill="#002776"/></svg></span></span><span class="psp">AAN</span></div><div class="psn">Vinicius</div><div class="psr">91★</div></div>
+          <div class="pslot"><div style="display:flex;justify-content:center;margin-bottom:7px"><span style="width:44px;height:30px;display:inline-flex;border-radius:3px;overflow:hidden;box-shadow:0 0 0 1.5px rgba(255,255,255,.15)"><svg viewBox="0 0 20 14" xmlns="http://www.w3.org/2000/svg"><rect width="20" height="14" rx="2" fill="#EF4135"/><rect width="13.33" height="14" fill="#fff"/><rect width="6.67" height="14" fill="#002395"/></svg></span></div><div class="psn">Mbappé <span class="disc">/ Aanv.</span></div><div class="psr"><span style="color:var(--gold)">★★★★★</span> 94</div></div>
+          <div class="pslot"><div style="display:flex;justify-content:center;margin-bottom:7px"><span style="width:44px;height:30px;display:inline-flex;border-radius:3px;overflow:hidden;box-shadow:0 0 0 1.5px rgba(255,255,255,.15)"><svg viewBox="0 0 20 14" xmlns="http://www.w3.org/2000/svg"><rect width="20" height="14" rx="2" fill="#EF2B2D"/><rect x="5" y="0" width="3" height="14" fill="#fff"/><rect x="0" y="5.5" width="20" height="3" fill="#fff"/><rect x="6" y="0" width="1.5" height="14" fill="#002868"/><rect x="0" y="6.25" width="20" height="1.5" fill="#002868"/></svg></span></div><div class="psn">Haaland <span class="disc">/ Aanv.</span></div><div class="psr"><span style="color:var(--gold)">★★★★★</span> 92</div></div>
+          <div class="pslot"><div style="display:flex;justify-content:center;margin-bottom:7px"><span style="width:44px;height:30px;display:inline-flex;border-radius:3px;overflow:hidden;box-shadow:0 0 0 1.5px rgba(255,255,255,.15)"><svg viewBox="0 0 20 14" xmlns="http://www.w3.org/2000/svg"><rect width="20" height="14" rx="2" fill="#009C3B"/><polygon points="10,1.5 18.5,7 10,12.5 1.5,7" fill="#FFDF00"/><circle cx="10" cy="7" r="3.2" fill="#002776"/></svg></span></div><div class="psn">Vinicius <span class="disc">/ Aanv.</span></div><div class="psr"><span style="color:var(--gold)">★★★★★</span> 91</div></div>
         </div>
         <div class="frow">
-          <div class="pslot"><div class="psw"><span class="psf"><span style="width:30px;height:21px;display:inline-flex;flex-shrink:0;border-radius:3px;overflow:hidden;vertical-align:middle;box-shadow:0 0 0 1px rgba(255,255,255,.12)"><svg viewBox="0 0 20 14"><rect width="20" height="14" rx="2" fill="#fff"/><rect x="8.5" y="0" width="3" height="14" fill="#CF142B"/><rect x="0" y="5.5" width="20" height="3" fill="#CF142B"/></svg></span></span><span class="psp">MID</span></div><div class="psn">Bellingham</div><div class="psr">90★</div></div>
-          <div class="pslot"><div class="psw"><span class="psf"><span style="width:30px;height:21px;display:inline-flex;flex-shrink:0;border-radius:3px;overflow:hidden;vertical-align:middle;box-shadow:0 0 0 1px rgba(255,255,255,.12)"><svg viewBox="0 0 20 14"><rect width="20" height="14" rx="2" fill="#AA151B"/><rect y="3.5" width="20" height="7" fill="#F1BF00"/></svg></span></span><span class="psp">MID</span></div><div class="psn">Rodri</div><div class="psr">93★</div></div>
-          <div class="pslot empty"><div class="psw"><span style="font-size:20px;color:var(--muted)">+</span></div><div class="psn" style="color:var(--muted)">Open</div><div class="psr" style="color:var(--muted)">—</div></div>
+          <div class="pslot"><div style="display:flex;justify-content:center;margin-bottom:7px"><span style="width:44px;height:30px;display:inline-flex;border-radius:3px;overflow:hidden;box-shadow:0 0 0 1.5px rgba(255,255,255,.15)"><svg viewBox="0 0 20 14" xmlns="http://www.w3.org/2000/svg"><rect width="20" height="14" rx="2" fill="#fff"/><rect x="8.5" y="0" width="3" height="14" fill="#CF142B"/><rect x="0" y="5.5" width="20" height="3" fill="#CF142B"/></svg></span></div><div class="psn">Bellingham <span class="disc">/ Mid.</span></div><div class="psr"><span style="color:var(--gold)">★★★★★</span> 90</div></div>
+          <div class="pslot"><div style="display:flex;justify-content:center;margin-bottom:7px"><span style="width:44px;height:30px;display:inline-flex;border-radius:3px;overflow:hidden;box-shadow:0 0 0 1.5px rgba(255,255,255,.15)"><svg viewBox="0 0 20 14" xmlns="http://www.w3.org/2000/svg"><rect width="20" height="14" rx="2" fill="#AA151B"/><rect y="3.5" width="20" height="7" fill="#F1BF00"/></svg></span></div><div class="psn">Rodri <span class="disc">/ Mid.</span></div><div class="psr"><span style="color:var(--gold)">★★★★★</span> 93</div></div>
+          <div class="pslot empty"><div style="width:44px;height:31px;border:1.5px dashed var(--muted);border-radius:3px;margin:0 auto 7px;display:flex;align-items:center;justify-content:center"><span style="font-size:16px;color:var(--muted)">+</span></div><div class="psn" style="color:var(--muted)">Open</div><div class="psr" style="color:var(--muted)">— —</div></div>
         </div>
         <div class="frow">
-          <div class="pslot"><div class="psw"><span class="psf"><span style="width:30px;height:21px;display:inline-flex;flex-shrink:0;border-radius:3px;overflow:hidden;vertical-align:middle;box-shadow:0 0 0 1px rgba(255,255,255,.12)"><svg viewBox="0 0 20 14"><rect width="20" height="14" rx="2" fill="#FFCE00"/><rect width="20" height="9.33" fill="#DD0000"/><rect width="20" height="4.67" fill="#1a1a1a"/></svg></span></span><span class="psp">DEF</span></div><div class="psn">Rüdiger</div><div class="psr">87★</div></div>
-          <div class="pslot"><div class="psw"><span class="psf"><span style="width:30px;height:21px;display:inline-flex;flex-shrink:0;border-radius:3px;overflow:hidden;vertical-align:middle;box-shadow:0 0 0 1px rgba(255,255,255,.12)"><svg viewBox="0 0 20 14"><rect width="20" height="14" rx="2" fill="#21468B"/><rect width="20" height="9.33" fill="#fff"/><rect width="20" height="4.67" fill="#AE1C28"/></svg></span></span><span class="psp">DEF</span></div><div class="psn">van Dijk</div><div class="psr">89★</div></div>
-          <div class="pslot"><div class="psw"><span class="psf"><span style="width:30px;height:21px;display:inline-flex;flex-shrink:0;border-radius:3px;overflow:hidden;vertical-align:middle;box-shadow:0 0 0 1px rgba(255,255,255,.12)"><svg viewBox="0 0 20 14"><rect width="20" height="14" rx="2" fill="#009C3B"/><polygon points="10,1.5 18.5,7 10,12.5 1.5,7" fill="#FFDF00"/><circle cx="10" cy="7" r="3.2" fill="#002776"/></svg></span></span><span class="psp">DEF</span></div><div class="psn">Militão</div><div class="psr">86★</div></div>
-          <div class="pslot empty"><div class="psw"><span style="font-size:20px;color:var(--muted)">+</span></div><div class="psn" style="color:var(--muted)">Open</div><div class="psr" style="color:var(--muted)">—</div></div>
+          <div class="pslot"><div style="display:flex;justify-content:center;margin-bottom:7px"><span style="width:44px;height:30px;display:inline-flex;border-radius:3px;overflow:hidden;box-shadow:0 0 0 1.5px rgba(255,255,255,.15)"><svg viewBox="0 0 20 14" xmlns="http://www.w3.org/2000/svg"><rect width="20" height="14" rx="2" fill="#FFCE00"/><rect width="20" height="9.33" fill="#DD0000"/><rect width="20" height="4.67" fill="#1a1a1a"/></svg></span></div><div class="psn">Rüdiger <span class="disc">/ Verd.</span></div><div class="psr"><span style="color:var(--gold)">★★★★</span><span style="color:var(--muted)">★</span> 87</div></div>
+          <div class="pslot"><div style="display:flex;justify-content:center;margin-bottom:7px"><span style="width:44px;height:30px;display:inline-flex;border-radius:3px;overflow:hidden;box-shadow:0 0 0 1.5px rgba(255,255,255,.15)"><svg viewBox="0 0 20 14" xmlns="http://www.w3.org/2000/svg"><rect width="20" height="14" rx="2" fill="#21468B"/><rect width="20" height="9.33" fill="#fff"/><rect width="20" height="4.67" fill="#AE1C28"/></svg></span></div><div class="psn">van Dijk <span class="disc">/ Verd.</span></div><div class="psr"><span style="color:var(--gold)">★★★★</span><span style="color:var(--muted)">★</span> 89</div></div>
+          <div class="pslot"><div style="display:flex;justify-content:center;margin-bottom:7px"><span style="width:44px;height:30px;display:inline-flex;border-radius:3px;overflow:hidden;box-shadow:0 0 0 1.5px rgba(255,255,255,.15)"><svg viewBox="0 0 20 14" xmlns="http://www.w3.org/2000/svg"><rect width="20" height="14" rx="2" fill="#009C3B"/><polygon points="10,1.5 18.5,7 10,12.5 1.5,7" fill="#FFDF00"/><circle cx="10" cy="7" r="3.2" fill="#002776"/></svg></span></div><div class="psn">Militão <span class="disc">/ Verd.</span></div><div class="psr"><span style="color:var(--gold)">★★★★</span><span style="color:var(--muted)">★</span> 86</div></div>
+          <div class="pslot empty"><div style="width:44px;height:31px;border:1.5px dashed var(--muted);border-radius:3px;margin:0 auto 7px;display:flex;align-items:center;justify-content:center"><span style="font-size:16px;color:var(--muted)">+</span></div><div class="psn" style="color:var(--muted)">Open</div><div class="psr" style="color:var(--muted)">— —</div></div>
         </div>
         <div class="frow">
-          <div class="pslot"><div class="psw"><span class="psf"><span style="width:30px;height:21px;display:inline-flex;flex-shrink:0;border-radius:3px;overflow:hidden;vertical-align:middle;box-shadow:0 0 0 1px rgba(255,255,255,.12)"><svg viewBox="0 0 20 14"><rect width="20" height="14" rx="2" fill="#EF3340"/><rect width="13.33" height="14" fill="#F5D80A"/><rect width="6.67" height="14" fill="#1a1a1a"/></svg></span></span><span class="psp">GK</span></div><div class="psn">Courtois</div><div class="psr">91★</div></div>
+          <div class="pslot"><div style="display:flex;justify-content:center;margin-bottom:7px"><span style="width:44px;height:30px;display:inline-flex;border-radius:3px;overflow:hidden;box-shadow:0 0 0 1.5px rgba(255,255,255,.15)"><svg viewBox="0 0 20 14" xmlns="http://www.w3.org/2000/svg"><rect width="20" height="14" rx="2" fill="#EF3340"/><rect width="13.33" height="14" fill="#F5D80A"/><rect width="6.67" height="14" fill="#1a1a1a"/></svg></span></div><div class="psn">Courtois <span class="disc">/ GK</span></div><div class="psr"><span style="color:var(--gold)">★★★★★</span> 91</div></div>
         </div>
+      </div>
       </div>
     </div>
     <div class="tsr">
